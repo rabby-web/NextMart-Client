@@ -13,9 +13,13 @@ import { Input } from "@/components/ui/input";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import Link from "next/link";
 import Logo from "@/app/assets/svgs/Logo";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { registrationSchema } from "./registerValidation";
 
 export default function RegisterForm() {
-  const form = useForm({});
+  const form = useForm({
+    resolver: zodResolver(registrationSchema),
+  });
 
   const {
     formState: { isSubmitting },
