@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import { Button } from "@/components/ui/button";
@@ -115,12 +116,19 @@ export default function RegisterForm() {
             )}
           />
 
-          <Button
+          {/* <Button
             disabled={passwordConfirm && password !== passwordConfirm}
             type="submit"
             className="mt-5 w-full"
           >
             {isSubmitting ? "Registering...." : "Register"}
+          </Button> */}
+          <Button
+            disabled={!!passwordConfirm && password !== passwordConfirm}
+            type="submit"
+            className="mt-5 w-full"
+          >
+            {isSubmitting ? "Registering..." : "Register"}
           </Button>
         </form>
       </Form>
