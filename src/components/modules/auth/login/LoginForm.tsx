@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import ReCAPTCHA from "react-google-recaptcha";
 import { Button } from "@/components/ui/button";
@@ -94,7 +95,7 @@ export default function LoginForm() {
 
           <div className="flex mt-3 w-full">
             <ReCAPTCHA
-              sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_CLIENT_KEY}
+              sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_CLIENT_KEY ?? ""}
               onChange={handleReCaptcha}
               className="mx-auto"
             />
