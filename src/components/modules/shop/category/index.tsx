@@ -1,7 +1,12 @@
-
+import { ICategory } from "@/types";
 import CreateCategoryModal from "./CreateCategoryModal";
 
-const ManageCategories = () => {
+type TCategoriesProps = {
+  categories: ICategory[];
+};
+
+const ManageCategories = ({ categories }: TCategoriesProps) => {
+  console.log(categories);
   return (
     <div>
       <div className="flex items-center justify-between">
