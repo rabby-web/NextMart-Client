@@ -3,8 +3,8 @@ import { getAllCategories } from "@/services/Category";
 import React from "react";
 
 const ProductCategory = async () => {
-  const { data, meta } = await getAllCategories();
-  console.log(data, meta);
+  const { data } = await getAllCategories();
+  // console.log(data, meta);
   return (
     <div>
       <ManageCategories categories={data}></ManageCategories>
