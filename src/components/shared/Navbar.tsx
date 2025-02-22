@@ -1,6 +1,6 @@
 "use client";
 
-import Logo from "@/app/assets/svgs/Logo";
+import Logo from "../../assets/svgs/Logo";
 import { Button } from "../ui/button";
 import { Heart, LogOut, ShoppingBag } from "lucide-react";
 import Link from "next/link";
@@ -22,15 +22,15 @@ import { protectedRoutes } from "@/contants";
 
 export default function Navbar() {
   const { user, setIsLoading } = useUser();
-  const pathname = usePathname()
-  const router = useRouter()
+  const pathname = usePathname();
+  const router = useRouter();
   console.log(user);
 
   const handleLogOut = () => {
     logout();
     setIsLoading(true);
-    if(protectedRoutes.some(route => pathname.match(route))){
-      router.push("/")
+    if (protectedRoutes.some((route) => pathname.match(route))) {
+      router.push("/");
     }
   };
 

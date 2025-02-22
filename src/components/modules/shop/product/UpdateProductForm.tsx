@@ -36,7 +36,7 @@ import { getAllBrands } from "@/services/Brand";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import { updateProduct } from "@/services/Product";
-import Logo from "@/app/assets/svgs/Logo";
+import Logo from "../../../../assets/svgs/Logo";
 
 export default function UpdateProductForm({ product }: { product: IProduct }) {
   const [imageFiles, setImageFiles] = useState<File[] | []>([]);

@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import styles from "./HeroSection.module.css";
 import Image from "next/image";
 // import cupImage from "@/assets/cup-with-headphone.png";
-import cupImage from "../../../../app/assets/cup-with-headphone.png";
+import cupImage from "../../../../assets/cup-with-headphone.png";
 
 const HeroSection = () => {
   return (
