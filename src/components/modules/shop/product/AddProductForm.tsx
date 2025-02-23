@@ -22,7 +22,6 @@ import { useEffect, useState } from "react";
 import NMImageUploader from "@/components/ui/core/NMImageUploader";
 import ImagePreviewer from "@/components/ui/core/NMImageUploader/ImagePreviewer";
 import { Plus } from "lucide-react";
-// import Logo from "@/assets/svgs/Logo";
 
 import {
   Select,
@@ -37,8 +36,9 @@ import { getAllBrands } from "@/services/Brand";
 // import { addProduct } from "@/services/Product";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
-import Logo from "@/app/assets/svgs/Logo";
+import Logo from "../../../../assets/svgs/Logo";
 import { addProduct } from "@/services/Product";
+
 
 export default function AddProductsForm() {
   const [imageFiles, setImageFiles] = useState<File[] | []>([]);
