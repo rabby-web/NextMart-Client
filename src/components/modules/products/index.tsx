@@ -1,12 +1,13 @@
 import ProductCard from "@/components/ui/core/ProductCard";
 import { IProduct } from "@/types";
-import React from "react";
+import FilterSidebar from "./filterSidebar";
 
 const AllProducts = ({ products }: { products: IProduct[] }) => {
-  console.log(products);
   return (
-    <div className="flex ">
-      <div>sidebar</div>
+    <div className="flex gap-8 my-10">
+      <div>
+        <FilterSidebar />
+      </div>
       <div>
         <div className="grid grid-cols-3 gap-8">
           {products?.map((product: IProduct, idx: number) => (
