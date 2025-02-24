@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use server";
 import { revalidateTag } from "next/cache";
 import { cookies } from "next/headers";
@@ -28,6 +29,7 @@ export const createBrand = async (brandData: FormData): Promise<any> => {
       },
     });
     revalidateTag("Brands");
+
     return res.json();
   } catch (error: any) {
     return Error(error);
