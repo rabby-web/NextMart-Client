@@ -17,7 +17,7 @@ const CartPage = () => {
         <div className="col-span-4">
           <Coupon />
           <div className="my-3"></div>
-          <Address></Address>
+          <Address />
           <div className="my-3"></div>
           <PaymentDetails />
         </div>
