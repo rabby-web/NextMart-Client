@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-// import cartSlice from "./features/cartSlice";
+import cartSlice from "./features/cartSlice";
 
 //! We will not do this
 //! This is a global variable so we will avoid this
@@ -8,7 +8,7 @@ import { configureStore } from "@reduxjs/toolkit";
 export const makeStore = () => {
   return configureStore({
     reducer: {
-      //   cart: cartSlice,
+      cart: cartSlice,
     },
   });
 };
