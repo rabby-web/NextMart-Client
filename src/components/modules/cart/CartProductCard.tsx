@@ -3,6 +3,7 @@ import {
   CartProduct,
   decrementOrderQuantity,
   incrementOrderQuantity,
+  removeProduct,
 } from "@/redux/features/cartSlice";
 import { useAppDispatch } from "@/redux/hooks";
 import { Minus, Plus, Trash } from "lucide-react";
@@ -17,6 +18,10 @@ export default function CartProductCard({ product }: { product: CartProduct }) {
 
   const handleDecrementQuantity = (id: string) => {
     dispatch(decrementOrderQuantity(id));
+  };
+
+  const handleRemoveProduct = (id: string) => {
+    dispatch(removeProduct(id));
   };
 
   return (
@@ -67,7 +72,11 @@ export default function CartProductCard({ product }: { product: CartProduct }) {
             >
               <Plus />
             </Button>
-            <Button variant="outline" className="size-8 rounded-sm">
+            <Button
+              onClick={() => handleRemoveProduct(product._id)}
+              variant="outline"
+              className="size-8 rounded-sm"
+            >
               <Trash className="text-red-500/50" />
             </Button>
           </div>
