@@ -8,7 +8,7 @@ const ManageProductsPage = async ({
 }) => {
   const { page } = await searchParams;
 
-  const { data, meta } = await getAllProducts(page, "2");
+  const { data, meta } = await getAllProducts(page, "3");
   return (
     <div>
       <ManageProducts products={data} meta={meta} />

@@ -1,4 +1,3 @@
-// import Address from "@/components/modules/cart/Address";
 import Address from "@/components/modules/cart/Address";
 import CartProducts from "@/components/modules/cart/CartProducts";
 import Coupon from "@/components/modules/cart/Coupon";
@@ -11,16 +10,10 @@ const CartPage = () => {
     <NMContainer>
       <ProductBanner title="Cart Page" path="Home - Cart" />
       <div className="grid grid-cols-12 gap-8 my-5">
-        <div className="col-span-8">
-          <CartProducts />
-        </div>
-        <div className="col-span-4">
-          <Coupon />
-          <div className="my-3"></div>
-          <Address />
-          <div className="my-3"></div>
-          <PaymentDetails />
-        </div>
+        <CartProducts />
+        <Coupon />
+        <Address />
+        <PaymentDetails />
       </div>
     </NMContainer>
   );

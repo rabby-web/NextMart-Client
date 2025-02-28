@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -17,9 +16,9 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
+import { addFlashSale } from "@/services/FlashSale";
 import { toast } from "sonner";
 import { Dispatch, SetStateAction } from "react";
-import { addFlashSale } from "@/services/FlashSale";
 
 type TModalProps = {
   selectedIds: string[];

@@ -1,5 +1,5 @@
 import ProductBanner from "@/components/modules/products/banner";
-import ProductDetails from "@/components/modules/products/ProductDetails";
+import ProductDetails from "@/components/modules/products/productDetails";
 import NMContainer from "@/components/ui/core/NMContainer";
 import { getSingleProduct } from "@/services/Product";
 

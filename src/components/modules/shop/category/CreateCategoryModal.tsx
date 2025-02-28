@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import { Button } from "@/components/ui/button";
 import NMImageUploader from "@/components/ui/core/NMImageUploader";
@@ -41,7 +40,6 @@ const CreateCategoryModal = () => {
       formData.append("icon", imageFiles[0] as File);
 
       const res = await createCategory(formData);
-      console.log(res);
 
       if (res?.success) {
         toast.success(res?.message);

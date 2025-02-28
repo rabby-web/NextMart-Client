@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -91,7 +90,7 @@ const CreateBrandModal = () => {
                       type="text"
                       {...field}
                       value={field.value || ""}
-                      className="rounded-sm w-64"
+                      className="rounded-sm w-56"
                       placeholder="Name"
                     />
                   </FormControl>

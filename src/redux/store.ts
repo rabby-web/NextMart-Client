@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { configureStore } from "@reduxjs/toolkit";
 import cartReducer from "./features/cartSlice";
 import {
@@ -11,6 +10,7 @@ import {
   REGISTER,
 } from "redux-persist";
 import storage from "./storage";
+import { couponMiddleware } from "./middlewares/coupon.middleware";
 
 //! We will not do this
 //! This is a global variable so we will avoid this
@@ -26,14 +26,14 @@ const persistedCart = persistReducer(persistOptions, cartReducer);
 export const makeStore = () => {
   return configureStore({
     reducer: {
-      cart: persistedCart,
+      cart: cartReducer,
     },
     middleware: (getDefaultMiddlewares: any) =>
       getDefaultMiddlewares({
         serializableCheck: {
           ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
         },
-      }),
+      }).concat(couponMiddleware),
   });
 };
 
